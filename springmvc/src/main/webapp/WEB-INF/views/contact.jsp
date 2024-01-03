@@ -1,6 +1,7 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
       pageEncoding="ISO-8859-1"%>
+     <%@page isELIgnored="false" %>
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,8 +18,10 @@
 
      <div class="container mt-5" >
 
-     <h3 class="text-center">Registration Form</h3>
+     <h3 class="text-center"> <%  String s = (String) request.getAttribute("header"); %><%=s %> </h3>
+     <p>${discription}</p>
        <form action="processform" method="post">
+
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  name="email">
