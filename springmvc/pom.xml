@@ -8,6 +8,13 @@
   <name>springmvc Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+      <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-core</artifactId>
+          <version>6.1.1</version>
+      </dependency>
+
 
     <dependency>
     <groupId>javax.servlet.jsp.jstl</groupId>

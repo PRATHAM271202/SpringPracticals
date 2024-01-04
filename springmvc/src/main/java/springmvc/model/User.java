@@ -3,14 +3,12 @@ package springmvc.model;
 import org.hibernate.annotations.GeneratorType;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
+@Table(name="details")
 public class User {
 
     private String email;
@@ -25,6 +23,10 @@ public class User {
     private LocalDate birthDate;
     @Id
     private String prnNo;
+
+    public void updatePrnNo(String fb,String dob,String ln){
+         this.prnNo = fb+dob+ln;
+    }
 
     public String getBd() {
         return bd;
