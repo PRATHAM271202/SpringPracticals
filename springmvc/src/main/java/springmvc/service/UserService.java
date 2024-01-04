@@ -9,6 +9,7 @@ public class UserService {
     @Autowired
     private UserDao userDao;
     public int createUser(User user){
+
         return this.userDao.saveUser(user);
     }
 }

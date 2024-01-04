@@ -1,34 +1,37 @@
 package springmvc.model;
 
 import org.hibernate.annotations.GeneratorType;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+
     private String email;
     private String userFirstName;
 
     private String userLastName;
     private String userPassword;
 
+    private String bd;
+
+    @DateTimeFormat(pattern = "yyyy/MM/dd")
     private LocalDate birthDate;
+    @Id
+    private String prnNo;
 
-    private String prnNo = this.userFirstName+this.birthDate.toString()+this.userLastName;
-
-    public int getId() {
-        return id;
+    public String getBd() {
+        return bd;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setBd(String bd) {
+        this.bd = bd;
     }
 
     public String getEmail() {
@@ -63,8 +66,13 @@ public class User {
         this.userPassword = userPassword;
     }
 
+
     public LocalDate getBirthDate() {
-        return birthDate;
+        return LocalDate.parse(bd);
+    }
+
+    public void updateLocalDate(String bd){
+        birthDate = LocalDate.parse(bd);
     }
 
     public void setBirthDate(LocalDate birthDate) {
@@ -82,12 +90,11 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
+                "email='" + email + '\'' +
                 ", userFirstName='" + userFirstName + '\'' +
                 ", userLastName='" + userLastName + '\'' +
                 ", userPassword='" + userPassword + '\'' +
-                ", birthDate=" + birthDate +
+                ", birthDate=" +birthDate +
                 ", prnNo='" + prnNo + '\'' +
                 '}';
     }
