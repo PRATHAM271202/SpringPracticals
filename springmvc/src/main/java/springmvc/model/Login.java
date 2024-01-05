@@ -2,8 +2,11 @@ package springmvc.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
 
 @Entity
+@Table(name="login")
 public class Login {
     @Id
     private String email;

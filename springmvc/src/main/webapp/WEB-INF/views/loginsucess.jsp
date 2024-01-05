@@ -8,7 +8,7 @@
 <h2>Congratulations You Have Successfully loged in...!!!</h2>
 <%
 
-     User user = user request.getAttribute("user");
+     User user = (User) request.getAttribute("user");
 
 %>
 

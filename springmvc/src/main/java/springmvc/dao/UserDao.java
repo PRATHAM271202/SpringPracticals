@@ -30,7 +30,7 @@ public class UserDao {
 
     @Transactional
     public User getUsers(String email,String password){
-        String hql = "FROM LoginUser WHERE Email = :email AND Password = :password";
+        String hql = "FROM User WHERE Email = :email AND Password = :password";
         Query query = this.hibernateTemplate.getSessionFactory().getCurrentSession().createQuery(hql);
         query.setParameter("email", email);
         query.setParameter("password", password);
