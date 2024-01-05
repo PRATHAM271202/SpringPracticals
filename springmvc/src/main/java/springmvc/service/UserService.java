@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import springmvc.dao.UserDao;
 import springmvc.model.User;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -14,4 +16,13 @@ public class UserService {
 
         return this.userDao.saveUser(user);
     }
+
+    public List<User> getAllUser(){
+        return this.userDao.getUser();
+    }
+
+    public User getLogin(String email,String pwd){
+        return this.userDao.getUsers(email,pwd);
+    }
+
 }

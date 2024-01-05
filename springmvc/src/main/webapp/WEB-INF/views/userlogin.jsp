@@ -16,21 +16,24 @@
   </head>
   <body>
 
-     <div class="container mt-5" >
+   <form  action="login" method="post">
+     <div class="form-group">
+       <label for="exampleInputEmail1">Email address</label>
+       <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+     </div>
 
-     <h3 class="text-center"> <%  String s = (String) request.getAttribute("header"); %><%=s %> </h3>
-     <form action="userDetails" method="post">
-          <div class="container text-center">
-            <button type="submit" class="btn btn-success">Click Here to See the details of Users</button>
-          </div>
-        </form>
 
-      <form action="userLogin" method="post">
-        <div class="container text-center">
-          <button type="submit" class="btn btn-success">Click Here to go to the User Login page</button>
-        </div>
-      </form>
-
+     <div class="form-group">
+       <label for="exampleInputPassword1">Password</label>
+       <input type="password" class="form-control" id="userPassword" placeholder="Password" name="userPassword">
+     </div>
+     <div class="form-check">
+       <input type="checkbox" class="form-check-input" id="exampleCheck1">
+       <label class="form-check-label" for="exampleCheck1">Check me out</label>
+     </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
      </div>
 
     <!-- Optional JavaScript -->

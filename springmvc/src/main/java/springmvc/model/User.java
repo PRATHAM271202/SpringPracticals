@@ -8,24 +8,45 @@ import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
-@Table(name="details")
+@Table(name="LoginUser")
 public class User {
 
+    @Column(name = "Email")
     private String email;
+    @Column(name = "First_Name")
     private String userFirstName;
-
+    @Column(name = "Last_Name")
     private String userLastName;
+    @Column(name = "Password")
     private String userPassword;
 
+    @Transient
     private String bd;
+    @Column(name = "Status")
+    private boolean status;
 
+    @Column(name = "DOB")
     @DateTimeFormat(pattern = "yyyy/MM/dd")
     private LocalDate birthDate;
+
+    @Column(name = "PrnNo")
     @Id
     private String prnNo;
 
     public void updatePrnNo(String fb,String dob,String ln){
          this.prnNo = fb+dob+ln;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void updateStatus(boolean val){
+        this.status=val;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     public String getBd() {
@@ -70,7 +91,7 @@ public class User {
 
 
     public LocalDate getBirthDate() {
-        return LocalDate.parse(bd);
+        return birthDate;
     }
 
     public void updateLocalDate(String bd){
@@ -96,7 +117,9 @@ public class User {
                 ", userFirstName='" + userFirstName + '\'' +
                 ", userLastName='" + userLastName + '\'' +
                 ", userPassword='" + userPassword + '\'' +
-                ", birthDate=" +birthDate +
+                ", bd='" + bd + '\'' +
+                ", status=" + status +
+                ", birthDate=" + birthDate +
                 ", prnNo='" + prnNo + '\'' +
                 '}';
     }
