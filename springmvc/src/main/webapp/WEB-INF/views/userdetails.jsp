@@ -20,7 +20,7 @@ if(names!=null) {for(User user : names){
        String ln = user.getUserLastName();
        String pwd = user.getUserPassword();
        boolean status = user.isStatus();
-       String bd = user.getBd();
+       LocalDate bd = user.getBirthDate();
        String pn = user.getPrnNo();
  %>
  <h1> The detail of the user <%=i%> is : </h1>

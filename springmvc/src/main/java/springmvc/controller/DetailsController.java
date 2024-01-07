@@ -69,7 +69,7 @@ public class DetailsController {
         return "userdetails";
     }
 
-    @RequestMapping(path = "/userLogin",method = RequestMethod.POST)
+    @RequestMapping(path = "/userLogin",method = {RequestMethod.GET,RequestMethod.POST})
     public String userLogin(){
         return "userlogin";
     }
@@ -82,7 +82,12 @@ public class DetailsController {
         System.out.println("The entered email was "+email+" and the pwd was "+pwd);
 
         User r= this.userService.getLogin(email,pwd);
+
+        if(r==null){
+            return "redirect:/userLogin";
+        }
         System.out.println("the user is "+r);
+
         model.addAttribute("user",r);
         return "loginsucess";
     }
