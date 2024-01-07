@@ -22,7 +22,10 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
         <property name="driverClassName" value="org.postgresql.Driver"/>
         <property name="url" value="jdbc:postgresql://localhost:5432/springjdbc"/>
         <property name="username" value="postgres"/>
-        <property name="password" value="Atham@6120"/>
+<!--The below line is for the company pc-->
+<!--        <property name="password" value="Atham@6120"/>-->
+<!--The below line is for the home laptop-->
+                <property name="password" value="Pratham@2002"/>
     </bean>
 
     <bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" name="session">
