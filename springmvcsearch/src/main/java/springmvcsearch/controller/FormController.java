@@ -15,6 +15,7 @@ public class FormController {
     @RequestMapping("/handle")
     public String formHandle(@ModelAttribute("student")Student student){
         System.out.println(student);
+        System.out.println(student.getAddress());
         return "success";
     }
 }

@@ -9,10 +9,12 @@ public class Student {
 
     private String name;
     private Long id;
-    private LocalDate dob;
+    private Date dob;
     private List<String> subjects;
     private String gender;
     private String type;
+
+    private Address address;
 
     public String getName() {
         return name;
@@ -62,6 +64,14 @@ public class Student {
         this.type = type;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -71,6 +81,7 @@ public class Student {
                 ", subjects=" + subjects +
                 ", gender='" + gender + '\'' +
                 ", type='" + type + '\'' +
+                ", address=" + address +
                 '}';
     }
 }

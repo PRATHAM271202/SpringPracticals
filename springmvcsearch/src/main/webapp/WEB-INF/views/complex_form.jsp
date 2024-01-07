@@ -21,7 +21,7 @@
 	<div class="container mt-4">
 
 		<div class="row">
-			<div class="col-md-6 offset-md-3">
+			<div class="col-md-8 offset-md-2">
 				<div class="card">
 					<div class="card-body">
 						<h3 class="text-center">Complex Form</h3>
@@ -84,6 +84,27 @@
 									<option value="normalstudent">Normal Student</option>
 								</select>
 							</div>
+
+
+                           <div class="card">
+                           <div class="card-body">
+                           <p>Your Address</p>
+                           	<div class="form-group">
+
+                           <input name="address.street" type="text" class="form-control"
+                           									id="exampleInputEmail" aria-describedby="emailhelp"
+                           									placeholder="enter your street">
+                              </div>
+
+                              	<div class="form-group">
+
+                                                         <input name="address.city" type="text" class="form-control"
+                                                         									id="exampleInputEmail" aria-describedby="emailhelp"
+                                                         									placeholder="enter your city">
+                                                            </div>
+
+                           </div>
+                           </div>
 
 							<div class="container text-center">
 								<button type="submit" class="btn btn-primary">Submit</button>
