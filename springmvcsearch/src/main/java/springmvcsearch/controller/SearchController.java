@@ -1,4 +1,4 @@
-package springmvcsearch;
+package springmvcsearch.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,7 @@ public class SearchController {
     @RequestMapping("/home")
     public String home(){
         System.out.println("THis is home view...!!");
-        return "home";
+        return "index";
     }
     @RequestMapping("/search")
     public RedirectView search(@RequestParam("querybox") String q){
