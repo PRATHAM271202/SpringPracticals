@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,34 +8,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="<c:url value="/resources/css/style.css"/>" rel="stylesheet"  >
-    <script src="<c:url value="/resources/js/script.js"/>"></script>
-    <title>Hello, world!</title>
+
+    <title>Upload File</title>
   </head>
   <body>
-  <img alt="My image" src="<c:url value="/resources/image/WIN_20240113_09_29_55_Pro.jpg" />">
-  <div class="container">
-  <div class ="card mx-auto mt-5 bg-secondary" style="width: 50%;">
-  <div class ="card-body py-5">
-      <h3 class="text-center text-white" style="text-transform:uppercase">My Search</h3>
-       <form action="search" class="mt-3">
-
-         <div class="form-group">
-
-           <input type="text" class="form-control" id="exampleInputPassword1" name="querybox" placeholder="Enter Your Key Word">
-         </div>
-
-
-           <div class="container text-center">
-                 <button class="btn btn-outline-light">Search</button>
-                  </div>
-
-
-       </form>
-  </div>
-  </div>
-  </div>
-
+      <div class="container">
+      <h1>Upload File</h1>
+      <form action="uploadimage" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="exampleFormControlFile1">upload image</label>
+          <input type="file" name="profile" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <button class="btn btn-outline-success">Upload</button>
+      </form>
+      </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

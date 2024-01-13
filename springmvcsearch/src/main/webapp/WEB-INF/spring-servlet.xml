@@ -22,9 +22,12 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
         <property name="suffix" value=".jsp"/>
     </bean>
 
+<!--    configuring the multipart resolver-->
+    <bean name="multiPartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
 
+<!--    <bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+<!--        &lt;!&ndash; Additional configuration if needed &ndash;&gt;-->
+<!--    </bean>-->
 
 </beans>
 
-
-        <!--/WEB-INF/views/hello.jsp-->
