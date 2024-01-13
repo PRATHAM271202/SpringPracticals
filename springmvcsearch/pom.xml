@@ -54,6 +54,7 @@
 
 
 
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -100,6 +101,8 @@
       <artifactId>spring-orm</artifactId>
       <version>5.3.10</version>
     </dependency>
+
+
 
 
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
