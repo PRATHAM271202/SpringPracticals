@@ -3,7 +3,9 @@ package springmvcsearch.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import springmvcsearch.entity.Student;
 
 @Controller
@@ -21,5 +23,10 @@ public class FormController {
         System.out.println(student);
         System.out.println(student.getAddress());
         return "success";
+    }
+
+    @RequestMapping("/handle/{id}")
+    public void getUserDetails(@PathVariable("id") int id){
+        System.out.println(id);
     }
 }
