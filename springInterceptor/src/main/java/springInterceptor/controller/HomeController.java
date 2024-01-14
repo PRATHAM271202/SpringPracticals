@@ -19,3 +19,11 @@ public class HomeController {
         return "welcome";
     }
 }
+/*
+interceptor is nothing but before controller,after cotroller and before view,after view if you want to process
+someting than you can do it using the interceptor .you have HandlerInterceptor interface whose implementing class
+is the HandlerInterceptorAdaptor  . either you can implement that interface or you can extend the class
+but in all that you have to override the method of those which are preHandler,postHandler,afterCompletion
+preHandler is used for the before controller use,postHandler is used for after cotroller and before view use,and
+afterCompletion is used for the after view.
+ */

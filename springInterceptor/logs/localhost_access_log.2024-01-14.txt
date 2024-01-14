@@ -4,3 +4,14 @@
 0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:12:34 +0530] "GET /springInterceptor/welcome?querybox=pratham HTTP/1.1" 500 9896
 0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:12:51 +0530] "GET /springInterceptor/home HTTP/1.1" 200 1874
 0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:12:57 +0530] "GET /springInterceptor/welcome?querybox=Pratham HTTP/1.1" 200 74
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:46:05 +0530] "GET /springInterceptor HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:46:07 +0530] "GET /springInterceptor/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:46:14 +0530] "GET /springInterceptor/home HTTP/1.1" 200 1880
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:46:19 +0530] "GET /springInterceptor/welcome?querybox=Dharam HTTP/1.1" 200 73
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:46:27 +0530] "GET /springInterceptor/welcome?querybox=Param HTTP/1.1" 200 31
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:50:13 +0530] "GET /springInterceptor/welcome?querybox=Param HTTP/1.1" 200 31
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:50:20 +0530] "GET /springInterceptor/welcome?querybox=Dharam HTTP/1.1" 200 73
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:50:36 +0530] "GET /springInterceptor HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:50:37 +0530] "GET /springInterceptor/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:50:44 +0530] "GET /springInterceptor/home HTTP/1.1" 200 1880
+0:0:0:0:0:0:0:1 - - [14/Jan/2024:08:50:49 +0530] "GET /springInterceptor/welcome?querybox=Dharam HTTP/1.1" 200 73
