@@ -2,5 +2,5 @@ package org.example.service;
 
 public interface PaymentService {
 
-    public void makePayment();
+    public void makePayment(int value);
 }
